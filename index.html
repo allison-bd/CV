@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrolladora Full Stack en formación | CV online</title>
+
+    <!-- ~~ Tipografías de Google Fonts ~~ -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap">
+
+    <!-- ~~ Iconos de Material Symbols ~~ -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
+
+    <!-- ~~ Tailwind CSS vía CDN ~~ -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'main': 'var(--bg-main)',
+                        'card': 'var(--surface-card)',
+                        'accent': 'var(--accent-primary)',
+                        'accent-sec': 'var(--accent-secondary)',
+                        'texto': 'var(--text-primary)',
+                        'texto-sec': 'var(--text-secondary)',
+                        'meta': 'var(--meta-color)',
+                        'input': 'var(--input-bg)',
+                        'nav-bg': 'var(--nav-bg)',
+                        'border-custom': 'var(--border-color)',
+                    },
+                    fontFamily: {
+                        'display': ['Playfair Display', 'serif'],
+                        'body': ['Nunito Sans', 'sans-serif'],
+                    },
+                    screens: {
+                        'desk': '1200px',
+                    },
+                },
+            },
+        }
+    </script>
+
+    <!-- ~~ Mis estilos mínimos (variables, pseudo-elementos, gradientes) ~~ -->
+    <link rel="stylesheet" href="./static/css/styles.css" type="text/css">
+</head>
+
+<body class="font-body text-base leading-relaxed bg-main text-texto">
+
+    <!-- ~~~~~~~~~~~~ BARRA DE NAVEGACIÓN ~~~~~~~~~~~~ -->
+    <nav class="barra-nav fixed top-0 w-full z-50 bg-nav-bg border-b border-border-custom">
+        <div class="flex items-center justify-center md:justify-between desk:justify-center desk:relative px-5 py-4">
+
+            <div class="hidden md:flex items-center gap-4 desk:gap-8">
+                <a class="nav-link font-body text-sm font-semibold tracking-wider text-texto-sec hover:text-accent transition-colors relative" href="#presentacion">Inicio</a>
+                <a class="nav-link font-body text-sm font-semibold tracking-wider text-texto-sec hover:text-accent transition-colors relative" href="#sobre-mi">Sobre mí</a>
+                <a class="nav-link font-body text-sm font-semibold tracking-wider text-texto-sec hover:text-accent transition-colors relative" href="#habilidades">Habilidades</a>
+                <a class="nav-link font-body text-sm font-semibold tracking-wider text-texto-sec hover:text-accent transition-colors relative" href="#proyectos">Proyectos</a>
+                <a class="nav-link font-body text-sm font-semibold tracking-wider text-texto-sec hover:text-accent transition-colors relative" href="#experiencia">Experiencia</a>
+                <a class="nav-link font-body text-sm font-semibold tracking-wider text-texto-sec hover:text-accent transition-colors relative" href="#educacion">Educación</a>
+                <a class="nav-link font-body text-sm font-semibold tracking-wider text-texto-sec hover:text-accent transition-colors relative" href="#contacto">Contacto</a>
+            </div>
+
+            <button class="p-2 rounded-full text-accent flex items-center justify-center transition-colors hover:bg-card md:static desk:absolute desk:right-5" id="boton-tema" aria-label="Cambiar tema">
+                <span class="material-symbols-outlined" id="icono-tema">dark_mode</span>
+            </button>
+        </div>
+    </nav>
+
+
+    <main class="pt-[60px]">
+
+        <!-- ~~~~~~~~~~~~ PRESENTACIÓN (Hero) ~~~~~~~~~~~~ -->
+        <section class="seccion max-w-[1120px] mx-auto px-5 flex flex-col md:flex-row items-center gap-8 text-center md:text-left py-10 scroll-mt-[72px]" id="presentacion">
+            <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-[3px] border-purple-300/30 dark:border-purple-400/40 shrink-0">
+                <img class="w-full h-full object-cover" alt="Foto de Allison Barra Díaz" src="./static/img/foto-perfil.png">
+            </div>
+            <div class="flex-1">
+                <h1 class="font-display text-[40px] md:text-[64px] font-bold text-accent mb-2 md:tracking-tight leading-[1.1]">Allison Barra Díaz</h1>
+                <h2 class="font-display text-2xl font-medium text-texto-sec mb-6">Full Stack Developer en formación</h2>
+                <p class="font-body text-lg leading-relaxed text-texto-sec max-w-[600px] mx-auto md:mx-0 text-justify">
+                    Desarrolladora en formación, enfocada en construir aplicaciones web accesibles y con propósito humano.
+                </p>
+                <div class="mt-8 flex flex-wrap gap-6">
+                    <a class="inline-block bg-accent text-main px-8 py-3 rounded-xl font-body text-sm font-semibold tracking-wider transition-opacity hover:opacity-80 shadow-sm" href="#contacto">Hablemos</a>
+                    <a class="inline-block border-2 border-accent text-accent px-8 py-3 rounded-xl font-body text-sm font-semibold tracking-wider transition-all hover:bg-accent hover:text-main" href="./static/pdf/CV_Allison-Barra-Diaz.pdf" download>Descargar CV</a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ~~~~~~~~~~~~ SOBRE MÍ ~~~~~~~~~~~~ -->
+        <section class="seccion bg-card border border-[rgba(201,184,216,0.15)] shadow-[0_4px_20px_rgba(0,0,0,0.04)] rounded-3xl max-w-[1000px] mx-5 md:mx-auto py-6 px-5 md:px-16 scroll-mt-[100px]" id="sobre-mi">
+            <div class="w-full">
+                <h2 class="font-display text-[32px] font-medium text-accent mb-4">Sobre mí</h2>
+                <p class="font-body text-base leading-relaxed text-texto-sec text-justify">
+                    Desde la etapa escolar, la tecnología y la comprensión de las personas han sido dos intereses que me han acompañado en paralelo. Hoy, al cursar simultáneamente dos bootcamps Full Stack (JavaScript y Java), confirmo que la programación es la disciplina en la que quiero proyectarme. Llego a este camino con la base de mi formación como Psicóloga y más de tres años de experiencia en el área educacional, trayectoria que me aporta capacidad de análisis, atención al detalle, organización y una mirada centrada en las personas que van a usar lo que construyo.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- ~~~~~~~~~~~~ HABILIDADES ~~~~~~~~~~~~ -->
+        <section class="seccion max-w-[1120px] mx-auto px-5 py-20 scroll-mt-[15px]" id="habilidades">
+            <h2 class="font-display text-[32px] font-medium text-accent text-center mb-8">Habilidades</h2>
+
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <span class="bg-accent-sec text-texto px-6 py-2 rounded-full font-body text-sm font-semibold tracking-wider">HTML</span>
+                <span class="bg-accent-sec text-texto px-6 py-2 rounded-full font-body text-sm font-semibold tracking-wider">CSS</span>
+                <span class="bg-accent-sec text-texto px-6 py-2 rounded-full font-body text-sm font-semibold tracking-wider">JavaScript</span>
+                <span class="bg-accent-sec text-texto px-6 py-2 rounded-full font-body text-sm font-semibold tracking-wider">Git</span>
+                <span class="bg-accent-sec text-texto px-6 py-2 rounded-full font-body text-sm font-semibold tracking-wider">GitHub</span>
+            </div>
+
+            <div class="max-w-[640px] mx-auto p-8 bg-card border border-[rgba(201,184,216,0.1)] rounded-2xl text-center">
+                <h3 class="font-body text-sm font-semibold text-accent tracking-wider mb-2">Perspectiva adicional</h3>
+                <p class="font-body text-xs text-texto-sec italic">
+                    Mi formación como psicóloga aporta una perspectiva centrada en el usuario: escucha activa, comunicación efectiva, resolución de problemas y capacidad de trabajar en equipos diversos.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- ~~~~~~~~~~~~ PROYECTOS ~~~~~~~~~~~~ -->
+        <section class="seccion max-w-[1120px] mx-auto px-5 py-20 scroll-mt-[15px]" id="proyectos">
+            <h2 class="font-display text-[32px] font-medium text-accent text-center mb-20">Proyectos Destacados</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <!-- ~~ Proyecto 1 ~~ -->
+                <div class="bg-card rounded-xl overflow-hidden border border-[rgba(143,97,183,0.112)] shadow-[0_10px_30px_rgba(0,0,0,0.04)] transition-transform duration-300 hover:-translate-y-2 flex flex-col">
+                    <div class="h-60 bg-card overflow-hidden">
+                        <img class="w-full h-full object-cover object-top" alt="Proyecto personal" src="./static/img/img-faro.png">
+                    </div>
+                    <div class="p-4 flex-1 flex flex-col">
+                        <h3 class="font-display text-2xl font-medium mb-2">Faro · Sitio Web de Salud Mental</h3>
+                        <p class="font-body text-base text-texto-sec mb-4 line-clamp-3">Sitio web responsivo de salud mental con herramientas interactivas. Construido con HTML5, Tailwind CSS, DaisyUI y JavaScript.
+                        </p>
+                        <div class="flex gap-4 mt-auto">
+                            <a class="font-body text-sm font-semibold tracking-wider text-accent border-b-2 border-accent/30 pb-[2px] transition-colors hover:border-accent" href="#">Ver demo</a>
+                            <a class="font-body text-sm font-semibold tracking-wider text-texto-sec border-b-2 border-transparent pb-[2px] transition-colors hover:border-accent" href="#">Ver código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ~~ Proyecto 2 ~~ -->
+                <div class="bg-card rounded-xl overflow-hidden border border-[rgba(143,97,183,0.112)] shadow-[0_10px_30px_rgba(0,0,0,0.04)] transition-transform duration-300 hover:-translate-y-2 flex flex-col">
+                    <div class="h-60 bg-card overflow-hidden">
+                        <img class="w-full h-full object-cover object-top" alt="Próximamente" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdlD_UeuvSQjzla0tH-yDVQWDKq86fFAQuSAYlRNKgXeFqZhNLVddxG_tyaJbnNcCmYemGCAzcf9SRCKAMMHmdn5JOOM6ti5P9ijjyVLcchO-X5vYs77u2VpRM9MGy_2g3MYtx1MwizXFee9cbKQTn4XEbux_9vLhpwdGc3s_q27JwWDIVOP_TSewXoHIsmZwz6oLYhABJABW9R-MMsxGeqpGalH8PyGfKLSYidNjsmpPM1WVQMMfGb8qzJdu3OoOSyBLJpZ0k21Eu">
+                    </div>
+                    <div class="p-4 flex-1 flex flex-col">
+                        <h3 class="font-display text-2xl font-medium mb-2">Próximamente</h3>
+                        <p class="font-body text-base text-texto-sec mb-4 line-clamp-3">Proyecto Full Stack JavaScript — Talento Digital para Chile</p>
+                        <div class="flex gap-4 mt-auto">
+                            <a class="font-body text-sm font-semibold tracking-wider text-accent border-b-2 border-accent/30 pb-[2px] transition-colors hover:border-accent" href="#">Ver demo</a>
+                            <a class="font-body text-sm font-semibold tracking-wider text-texto-sec border-b-2 border-transparent pb-[2px] transition-colors hover:border-accent" href="#">Ver código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ~~ Proyecto 3 ~~ -->
+                <div class="bg-card rounded-xl overflow-hidden border border-[rgba(143,97,183,0.112)] shadow-[0_10px_30px_rgba(0,0,0,0.04)] transition-transform duration-300 hover:-translate-y-2 flex flex-col">
+                    <div class="h-60 bg-card overflow-hidden">
+                        <img class="w-full h-full object-cover object-top" alt="Próximamente" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb6Zxie8rL74b7EgMsvmfeMAuNrtay4uuCaOOFD-QWBFFhnybMFXyNWgDeYiqf90gm6EXlr5nJ0f0c5XYK2r-4eE69PU4Gzcr9TahlrWQJenGcSdW7Cup8KhafBAwpXJ9oSXux_n--eCkGlVk6opU8-jDVAuqmHz0F_-84l5WIRse9yGc4ytBwldP9cUGKSY7oUULx5HrGbCuLQ_vm_o2WNi7opZ9fUAyQmWXR_5esFYrma6XhNorDhE7zINA0t2XmAspl_StubTAP">
+                    </div>
+                    <div class="p-4 flex-1 flex flex-col">
+                        <h3 class="font-display text-2xl font-medium mb-2">Próximamente</h3>
+                        <p class="font-body text-base text-texto-sec mb-4 line-clamp-3">Proyecto Full Stack Java — Skillnest</p>
+                        <div class="flex gap-4 mt-auto">
+                            <a class="font-body text-sm font-semibold tracking-wider text-accent border-b-2 border-accent/30 pb-[2px] transition-colors hover:border-accent" href="#">Ver demo</a>
+                            <a class="font-body text-sm font-semibold tracking-wider text-texto-sec border-b-2 border-transparent pb-[2px] transition-colors hover:border-accent" href="#">Ver código</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ~~~~~~~~~~~~ EXPERIENCIA LABORAL ~~~~~~~~~~~~ -->
+        <section class="seccion max-w-[1120px] mx-auto px-5 py-20 scroll-mt-[15px]" id="experiencia">
+            <div class="bg-card shadow-[0_4px_20px_rgba(0,0,0,0.04)] border border-[rgba(201,184,216,0.15)] rounded-3xl px-5 md:px-16 py-10 max-w-[700px] mx-auto">
+                <h2 class="font-display text-[32px] font-medium text-accent text-center mb-14">Experiencia Laboral</h2>
+
+                <div class="linea-tiempo max-w-[576px] mx-auto relative">
+
+                    <div class="pl-12 relative mb-8 group">
+                        <div class="absolute left-3 top-2 w-2 h-2 rounded-full bg-accent transition-transform group-hover:scale-150"></div>
+                        <h3 class="font-display text-2xl font-medium">Psicóloga</h3>
+                        <p class="font-body text-sm font-semibold tracking-wider text-meta mt-1 text-justify">Complejo Educacional Las Araucarias · nov. 2024 - feb. 2026 · San Fernando, Chile</p>
+                        <p class="font-body text-base text-texto-sec mt-2 text-justify">Evaluación psicoeducativa, intervención en crisis, orientación a estudiantes y familias, asesoramiento docente en inclusión escolar y mejora de la convivencia.</p>
+                    </div>
+
+                    <div class="pl-12 relative group">
+                        <div class="absolute left-3 top-2 w-2 h-2 rounded-full bg-accent transition-transform group-hover:scale-150"></div>
+                        <h3 class="font-display text-2xl font-medium">Psicóloga</h3>
+                        <p class="font-body text-sm font-semibold tracking-wider text-meta mt-1 text-justify">Liceo Politécnico Pablo Rodríguez Caviedes · may. 2022 - feb. 2024 · Illapel, Chile</p>
+                        <p class="font-body text-base text-texto-sec mt-2 text-justify">Mediación de conflictos, contención emocional, asesoramiento a docentes y familias, aplicación de protocolos normativos de convivencia escolar.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ~~~~~~~~~~~~ EDUCACIÓN ~~~~~~~~~~~~ -->
+        <section class="seccion max-w-[1120px] mx-auto px-5 py-20 scroll-mt-[15px]" id="educacion">
+            <div class="bg-card shadow-[0_4px_20px_rgba(0,0,0,0.04)] border border-[rgba(201,184,216,0.15)] rounded-3xl px-5 md:px-16 py-10 max-w-[700px] mx-auto">
+                <h2 class="font-display text-[32px] font-medium text-accent text-center mb-14">Educación</h2>
+
+                <div class="linea-tiempo max-w-[576px] mx-auto relative">
+
+                    <div class="pl-12 relative mb-8 group">
+                        <div class="absolute left-3 top-2 w-2 h-2 rounded-full bg-accent transition-transform group-hover:scale-150"></div>
+                        <h3 class="font-display text-2xl font-medium">Bootcamp Full Stack JavaScript Trainee</h3>
+                        <p class="font-body text-sm font-semibold tracking-wider text-meta mt-1 text-justify">Talento Digital para Chile · mayo 2026 - Actualidad</p>
+                        <p class="font-body text-base text-texto-sec mt-2 text-justify">Programa formativo orientado al desarrollo de aplicaciones web Full Stack con JavaScript, Node.js, Express, PostgreSQL y REST APIs.</p>
+                    </div>
+
+                    <div class="pl-12 relative mb-8 group">
+                        <div class="absolute left-3 top-2 w-2 h-2 rounded-full bg-accent transition-transform group-hover:scale-150"></div>
+                        <h3 class="font-display text-2xl font-medium">Bootcamp Full-Stack Java</h3>
+                        <p class="font-body text-sm font-semibold tracking-wider text-meta mt-1 text-justify">Skillnest · mayo 2026 - Actualidad</p>
+                        <p class="font-body text-base text-texto-sec mt-2 text-justify">Bootcamp intensivo Part-Time Online de 8 semanas. Stack: HTML5, CSS3, JavaScript, jQuery, Java 8, Spring Boot, Spring Data JPA, Spring Security, MySQL.</p>
+                    </div>
+
+                    <div class="pl-12 relative group">
+                        <div class="absolute left-3 top-2 w-2 h-2 rounded-full bg-accent transition-transform group-hover:scale-150"></div>
+                        <h3 class="font-display text-2xl font-medium">Psicóloga</h3>
+                        <p class="font-body text-sm font-semibold tracking-wider text-meta mt-1 text-justify">Universidad Autónoma de Chile · 2017 – 2022</p>
+                        <p class="font-body text-base text-texto-sec mt-2 text-justify">Formación profesional orientada al análisis de la conducta humana, el acompañamiento emocional y el desarrollo de estrategias de intervención.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ~~~~~~~~~~~~ CONTACTO ~~~~~~~~~~~~ -->
+        <section class="seccion max-w-[1120px] mx-auto px-5 py-20 scroll-mt-[15px]" id="contacto">
+            <div class="max-w-[640px] mx-auto bg-card p-8 rounded-3xl border border-[rgba(201,184,216,0.1)] shadow-[0_10px_30px_rgba(0,0,0,0.04)]">
+                <h2 class="font-display text-[32px] font-medium text-accent text-center mb-4">Contacto</h2>
+                <p class="font-body text-base text-texto-sec text-center mb-8">¿Tienes una idea? Construyámosla juntos.</p>
+
+                <form class="flex flex-col gap-4" action="#" method="POST">
+                    <div>
+                        <label class="block font-body text-sm font-semibold tracking-wider mb-2" for="name">Nombre</label>
+                        <input class="w-full py-3 px-4 rounded-xl border border-border-custom bg-input text-texto font-body text-base outline-none transition-all focus:border-accent focus:ring-2 focus:ring-accent" id="name" name="name" type="text" placeholder="Tu nombre" required>
+                    </div>
+
+                    <div>
+                        <label class="block font-body text-sm font-semibold tracking-wider mb-2" for="email">Correo electrónico</label>
+                        <input class="w-full py-3 px-4 rounded-xl border border-border-custom bg-input text-texto font-body text-base outline-none transition-all focus:border-accent focus:ring-2 focus:ring-accent" id="email" name="email" type="email" placeholder="tu@email.com" required>
+                    </div>
+
+                    <div>
+                        <label class="block font-body text-sm font-semibold tracking-wider mb-2" for="message">Mensaje</label>
+                        <textarea class="w-full py-3 px-4 rounded-xl border border-border-custom bg-input text-texto font-body text-base outline-none transition-all resize-none focus:border-accent focus:ring-2 focus:ring-accent" id="message" name="message" rows="4" placeholder="¿En qué puedo ayudarte?" required></textarea>
+                    </div>
+
+                    <div class="text-center pt-4">
+                        <button class="bg-accent text-main px-10 py-3 rounded-xl font-body text-sm font-semibold tracking-wider transition-opacity hover:opacity-90 shadow-md cursor-pointer" type="submit">Enviar mensaje</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ~~~~~~~~~~~~ PIE DE PÁGINA ~~~~~~~~~~~~ -->
+    <footer class="w-full py-8 mt-8 border-t border-[rgba(201,184,216,0.2)]">
+        <div class="flex flex-col md:flex-row justify-between items-center max-w-[1120px] mx-auto px-5 gap-3">
+            <p class="font-body text-base text-texto-sec text-center md:text-left">© 2026 Allison Barra Díaz · Desarrolladora Full Stack en formación</p>
+            <div class="flex gap-4">
+                <a class="text-texto-sec transition-colors hover:text-accent" href="https://github.com/allison-bd" target="_blank" aria-label="GitHub de Allison Barra Díaz"><svg xmlns="http://www.w3.org/2000/svg" width="117.88" height="25" viewBox="0 0 512 139"><path fill="currentColor" d="M98.696 59.312h-43.06a2.015 2.015 0 0 0-2.013 2.014v21.053c0 1.111.902 2.015 2.012 2.015h16.799v26.157s-3.772 1.286-14.2 1.286c-12.303 0-29.49-4.496-29.49-42.288c0-37.8 17.897-42.773 34.698-42.773c14.543 0 20.809 2.56 24.795 3.794c1.253.384 2.412-.863 2.412-1.975l4.803-20.342c0-.52-.176-1.146-.769-1.571C93.064 5.527 83.187 0 58.233 0C29.488 0 0 12.23 0 71.023c0 58.795 33.76 67.556 62.21 67.556c23.555 0 37.844-10.066 37.844-10.066c.59-.325.653-1.148.653-1.526V61.326c0-1.11-.9-2.014-2.01-2.014m221.8-51.953c0-1.12-.888-2.024-1.999-2.024h-24.246a2.016 2.016 0 0 0-2.008 2.024l.006 46.856h-37.792V7.36c0-1.12-.892-2.024-2.001-2.024H228.21a2.014 2.014 0 0 0-2.003 2.024v126.872c0 1.12.9 2.03 2.003 2.03h24.245c1.109 0 2-.91 2-2.03V79.964h37.793l-.066 54.267c0 1.12.9 2.03 2.008 2.03h24.304c1.11 0 1.998-.91 2-2.03zM144.37 24.322c0-8.73-7-15.786-15.635-15.786c-8.627 0-15.632 7.055-15.632 15.786c0 8.72 7.005 15.795 15.632 15.795c8.635 0 15.635-7.075 15.635-15.795m-1.924 83.212V48.97a2.015 2.015 0 0 0-2.006-2.021h-24.169c-1.109 0-2.1 1.144-2.1 2.256v83.905c0 2.466 1.536 3.199 3.525 3.199h21.775c2.39 0 2.975-1.173 2.975-3.239zM413.162 46.95h-24.06c-1.104 0-2.002.909-2.002 2.028v62.21s-6.112 4.472-14.788 4.472s-10.977-3.937-10.977-12.431v-54.25c0-1.12-.897-2.03-2.001-2.03h-24.419c-1.102 0-2.005.91-2.005 2.03v58.358c0 25.23 14.063 31.403 33.408 31.403c15.87 0 28.665-8.767 28.665-8.767s.61 4.62.885 5.168c.276.547.994 1.098 1.77 1.098l15.535-.068c1.102 0 2.005-.911 2.005-2.025l-.008-85.168a2.02 2.02 0 0 0-2.008-2.028m55.435 68.758c-8.345-.254-14.006-4.041-14.006-4.041V71.488s5.585-3.423 12.436-4.035c8.664-.776 17.013 1.841 17.013 22.51c0 21.795-3.768 26.096-15.443 25.744m9.49-71.483c-13.665 0-22.96 6.097-22.96 6.097V7.359a2.01 2.01 0 0 0-2-2.024h-24.315a2.013 2.013 0 0 0-2.004 2.024v126.872c0 1.12.898 2.03 2.007 2.03h16.87c.76 0 1.335-.39 1.76-1.077c.419-.682 1.024-5.85 1.024-5.85s9.942 9.422 28.763 9.422c22.096 0 34.768-11.208 34.768-50.315s-20.238-44.217-33.913-44.217M212.229 46.73h-18.187l-.028-24.027c0-.909-.468-1.364-1.52-1.364H167.71c-.964 0-1.481.424-1.481 1.35v24.83s-12.42 2.998-13.26 3.24a2.01 2.01 0 0 0-1.452 1.934v15.603c0 1.122.896 2.027 2.005 2.027h12.707v37.536c0 27.88 19.556 30.619 32.753 30.619c6.03 0 13.243-1.937 14.434-2.376c.72-.265 1.138-1.01 1.138-1.82l.02-17.164c0-1.119-.945-2.025-2.01-2.025c-1.06 0-3.77.431-6.562.431c-8.933 0-11.96-4.154-11.96-9.53l-.001-35.67h18.188a2.014 2.014 0 0 0 2.006-2.028V48.753c0-1.12-.897-2.022-2.006-2.022"/></svg></a>
+                <a class="text-texto-sec transition-colors hover:text-accent" href="https://www.linkedin.com/in/allison-barra-diaz/" target="_blank" aria-label="LinkedIn de Allison Barra Díaz"><svg xmlns="http://www.w3.org/2000/svg" width="128" height="28" viewBox="0 0 512 128"><path fill="currentColor" d="m202.057 74.971l28.252 34.743H208l-25.143-31.908v31.908h-18.286V18.286h18.286v53.76l23.223-26.332h23.314zm-73.143-31.085a24.78 24.78 0 0 0-20.205 10.971v-9.143h-17.28v64h18.285V79.817a15.91 15.91 0 0 1 15.177-17.646c10.606 0 12.252 10.423 12.252 17.646v29.897h18.286v-33.92c0-20.114-6.675-31.908-26.149-31.908zm163.657 35.291q.105 2.011 0 4.023h-48v.64a16.366 16.366 0 0 0 16.732 13.074a22.95 22.95 0 0 0 16.823-6.308l12.16 9.143a39.4 39.4 0 0 1-29.715 11.794a31.91 31.91 0 0 1-33.828-34.286a32.73 32.73 0 0 1 34.377-33.371c17.189 0 31.451 12.16 31.451 35.291m-17.005-7.863a13.35 13.35 0 0 0-14.537-12.8c-8.04-.869-15.321 4.794-16.458 12.8zM18.286 18.286H0v91.428h54.857V91.43H18.286zm329.143 0h18.285v91.428h-17.28v-6.4a22.31 22.31 0 0 1-18.285 8.229a31.177 31.177 0 0 1-30.263-33.829a30.72 30.72 0 0 1 30.171-33.828a23.95 23.95 0 0 1 17.372 6.4zm1.371 59.428A14.903 14.903 0 0 0 333.989 60.8c-8.747.635-15.375 8.157-14.903 16.914c-.472 8.757 6.156 16.28 14.903 16.915A14.903 14.903 0 0 0 348.8 77.714M73.143 16.457A11.61 11.61 0 0 0 61.714 27.43c0 6.311 5.117 11.428 11.429 11.428S84.57 33.74 84.57 27.43a11.61 11.61 0 0 0-11.428-10.972M64 109.714h18.286v-64H64zM512 9.143v109.714a9.143 9.143 0 0 1-9.143 9.143H393.143a9.143 9.143 0 0 1-9.143-9.143V9.143A9.143 9.143 0 0 1 393.143 0h109.714A9.143 9.143 0 0 1 512 9.143m-91.429 36.571h-18.285v64h18.285zm2.286-18.285c0-6.312-5.117-11.429-11.428-11.429S400 21.117 400 27.429c0 6.311 5.117 11.428 11.429 11.428c6.311 0 11.428-5.117 11.428-11.428m70.857 48.365c0-20.114-6.674-31.908-26.148-31.908a24.78 24.78 0 0 0-20.572 10.971v-9.143h-17.28v64H448V79.817a15.91 15.91 0 0 1 15.177-17.646c10.606 0 12.252 10.423 12.252 17.646v29.897h18.285z"/></svg></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ~~ JavaScript ~~ -->
+    <script src="./static/js/scripts.js"></script>
+
+</body>
+</html>
