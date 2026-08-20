@@ -248,7 +248,10 @@
                 <h2 class="font-display text-[32px] font-medium text-accent text-center mb-4">Contacto</h2>
                 <p class="font-body text-base text-texto-sec text-center mb-8">¿Tienes una idea? Construyámosla juntos.</p>
 
-                <form class="flex flex-col gap-4" action="#" method="POST">
+                <form id="contact-form" class="flex flex-col gap-4" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="cb1cde18-73e1-4557-bdaf-b3b06c21e6ad">
+                    <input type="hidden" name="subject" value="Nuevo mensaje desde tu CV">
+                    <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
                     <div>
                         <label class="block font-body text-sm font-semibold tracking-wider mb-2" for="name">Nombre</label>
                         <input class="w-full py-3 px-4 rounded-xl border border-border-custom bg-input text-texto font-body text-base outline-none transition-all focus:border-accent focus:ring-2 focus:ring-accent" id="name" name="name" type="text" placeholder="Tu nombre" required>
@@ -266,6 +269,7 @@
 
                     <div class="text-center pt-4">
                         <button class="bg-accent text-main px-10 py-3 rounded-xl font-body text-sm font-semibold tracking-wider transition-opacity hover:opacity-90 shadow-md cursor-pointer" type="submit">Enviar mensaje</button>
+                        <p id="form-status" class="mt-4 font-body text-sm"></p>
                     </div>
                 </form>
             </div>

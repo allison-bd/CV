@@ -45,3 +45,37 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+
+const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
+
+if (contactForm) {
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Enviando...';
+        submitBtn.disabled = true;
+        formStatus.textContent = '';
+        try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: new FormData(contactForm),
+            });
+            const data = await response.json();
+            if (data.success) {
+                formStatus.textContent = '¡Mensaje enviado! Gracias por escribir.';
+                contactForm.reset();
+            } else {
+                formStatus.textContent = 'Hubo un problema. Intenta de nuevo.';
+            }
+        } catch (error) {
+            formStatus.textContent = 'Error de conexión. Intenta más tarde.';
+        } finally {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        }
+    });
+}
