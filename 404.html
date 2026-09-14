@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>Página no encontrada | Allison Barra Díaz</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'main': 'var(--bg-main)',
+                        'accent': 'var(--accent-primary)',
+                        'texto': 'var(--text-primary)',
+                        'texto-sec': 'var(--text-secondary)',
+                    },
+                    fontFamily: {
+                        'display': ['Playfair Display', 'serif'],
+                        'body': ['Nunito Sans', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+
+    <style>
+        :root {
+            --bg-main: #FAF7F2;
+            --accent-primary: #C9B8D8;
+            --text-primary: #3D3535;
+            --text-secondary: #7A6E6E;
+            --gradient-end: #C9B8D8;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-main: #1E1520;
+                --accent-primary: #D4C0E8;
+                --text-primary: #F2E8F5;
+                --text-secondary: #A090B0;
+                --gradient-end: #2E1F3D;
+            }
+        }
+        body {
+            background-image: radial-gradient(125% 125% at 50% 0%, var(--bg-main) 50%, var(--gradient-end) 100%);
+        }
+    </style>
+</head>
+
+<body class="font-body text-base bg-main text-texto min-h-screen flex items-center justify-center px-5">
+<div class="text-center max-w-md">
+    <span class="material-symbols-outlined text-accent" style="font-size: 64px;">explore_off</span>
+    <h1 class="font-display text-4xl font-medium text-accent mt-6 mb-4">404</h1>
+    <p class="text-texto-sec text-lg mb-8">La página que buscas no existe o fue movida.</p>
+    <a href="/" class="inline-block bg-accent text-main px-8 py-3 rounded-xl font-body text-sm font-semibold tracking-wider transition-opacity hover:opacity-90 shadow-md">
+        Volver al inicio
+    </a>
+</div>
+</body>
+</html>
