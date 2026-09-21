@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+/* ───── Variables de color: modo claro ───── */
+:root {
+  --bg-main: #FAF7F2;
+  --surface-card: rgba(238, 237, 235, 0.8);
+  --accent-primary: #C9B8D8;
+  --accent-secondary: #E0D4ED;
+  --text-primary: #3D3535;
+  --text-secondary: #7A6E6E;
+  --nav-bg: rgba(250, 247, 242, 0.8);
+  --border-color: rgba(102, 89, 117, 0.2);
+  --input-bg: #FFFFFF;
+  --meta-color: #8A7B99;
+  --gradient-end: #C9B8D8;
+}
+
+/* ───── Variables de color: modo oscuro ───── */
+body.dark {
+  --bg-main: #1E1520;
+  --surface-card: #2C1F35;
+  --accent-primary: #D4C0E8;
+  --accent-secondary: #4A3A47;
+  --text-primary: #F2E8F5;
+  --text-secondary: #A090B0;
+  --nav-bg: rgba(30, 21, 32, 0.8);
+  --border-color: rgba(212, 192, 232, 0.35);
+  --input-bg: #3A2D45;
+  --meta-color: #D4C0E8;
+  --gradient-end: #2E1F3D;
+}
+
+/* ───── Configuración de Tailwind ───── */
+@theme inline {
+  --color-main: var(--bg-main);
+  --color-card: var(--surface-card);
+  --color-accent: var(--accent-primary);
+  --color-accent-sec: var(--accent-secondary);
+  --color-texto: var(--text-primary);
+  --color-texto-sec: var(--text-secondary);
+  --color-meta: var(--meta-color);
+  --color-input: var(--input-bg);
+  --color-nav-bg: var(--nav-bg);
+  --color-border-custom: var(--border-color);
+
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Nunito Sans', sans-serif;
+
+  --breakpoint-desk: 1200px;
+}
+
+/* ───── Estilos personalizados ───── */
+.barra-nav {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.linea-tiempo::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--accent-primary);
+  opacity: 0.3;
+}
+
+body {
+  background-color: var(--bg-main);
+  background-image: radial-gradient(125% 125% at 50% 0%, var(--bg-main) 50%, var(--gradient-end) 100%);
+  color: var(--text-primary);
+  font-family: 'Nunito Sans', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
