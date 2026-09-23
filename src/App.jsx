@@ -8,7 +8,7 @@ import Certificaciones from './components/Certificaciones'
 import Contacto from './components/Contacto'
 import GradientBackground from './components/GradientBackground'
 import ScrollAnimations from './components/ScrollAnimations'
-
+import Footer from './components/Footer'
 
 function App() {
     const [estaOscuro, setEstaOscuro] = useState(true)
@@ -38,6 +38,7 @@ function App() {
                 <Certificaciones />
                 <Contacto />
             </main>
+            <Footer />
         </>
     )
 }
