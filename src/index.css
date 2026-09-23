@@ -95,7 +95,6 @@ body.light .interactive-blob {
 /* ───── Navbar glass (sin sombra) ───── */
 .glass {
   backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
   background: var(--surface-card);
   border: 2px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 0 20px rgba(255, 177, 115, 0.15);
@@ -107,7 +106,6 @@ body.light .interactive-blob {
   border-radius: 15px;
   background: var(--surface-card);
   backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
 }
 
 .glass-card::before {
@@ -116,7 +114,6 @@ body.light .interactive-blob {
   inset: 0;
   border-radius: inherit;
   backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
   z-index: -1;
 }
 
@@ -397,7 +394,6 @@ body.light nav .social-icon:hover {
   padding: 12px;
   background: transparent;
   backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
   border: none;
 }
 
@@ -409,8 +405,6 @@ body.light nav .social-icon:hover {
   background: rgba(155, 18, 18, 0.35);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
   padding: 12px;
   pointer-events: none;
 }
@@ -428,7 +422,6 @@ body.light .photo-frame::after {
 .glass-btn {
   position: relative;
   backdrop-filter: blur(12px) saturate(160%);
-  -webkit-backdrop-filter: blur(12px) saturate(160%);
   overflow: hidden;
   transition: all 0.35s ease;
 }
