@@ -34,8 +34,8 @@ const Contacto = () => {
     }
 
     return (
-        <section className="max-w-[1120px] mx-auto px-5 py-20 scroll-mt-[15px]" id="contacto">
-            <div className="max-w-[640px] mx-auto bg-card p-8 rounded-3xl border border-[rgba(201,184,216,0.1)] shadow-[0_10px_30px_rgba(0,0,0,0.04)]">
+        <section className=" max-w-[1120px] mx-auto px-5 py-20 scroll-mt-[15px]" id="contacto">
+            <div className="glass-card max-w-[640px] mx-auto p-8">
                 <h2 className="font-display text-[32px] font-medium text-accent text-center mb-4">Contacto</h2>
                 <p className="font-body text-base text-texto-sec text-center mb-8">¿Tienes una idea? Construyámosla juntos.</p>
 
@@ -60,7 +60,7 @@ const Contacto = () => {
                     </div>
 
                     <button
-                        className="bg-accent text-main px-8 py-3 rounded-xl font-body text-sm font-semibold tracking-wider transition-opacity hover:opacity-80 shadow-sm disabled:opacity-50"
+                        className="glass-btn border border-accent/50 text-accent px-8 py-3 rounded-xl font-body text-sm font-semibold tracking-wider disabled:opacity-50"
                         type="submit"
                         disabled={enviando}
                     >

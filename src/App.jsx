@@ -1,24 +1,23 @@
-import { useState, useEffect } from 'react'
+import {useState, useEffect, StrictMode} from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import SobreMi from './components/SobreMi'
-import Habilidades from './components/Habilidades'
 import Proyectos from './components/Proyectos'
-import Experiencia from './components/Experiencia'
-import Educacion from './components/Educacion'
+import Habilidades from './components/Habilidades'
+import Trayectoria from './components/Trayectoria.jsx'
+import Certificaciones from './components/Certificaciones'
 import Contacto from './components/Contacto'
-import Footer from './components/Footer'
-
+import GradientBackground from './components/GradientBackground'
+import ScrollAnimations from './components/ScrollAnimations'
 
 
 function App() {
-    const [estaOscuro, setEstaOscuro] = useState(false)
+    const [estaOscuro, setEstaOscuro] = useState(true)
 
     useEffect(() => {
         if (estaOscuro) {
-            document.body.classList.add('dark')
+            document.body.classList.remove('light')
         } else {
-            document.body.classList.remove('dark')
+            document.body.classList.add('light')
         }
     }, [estaOscuro])
 
@@ -28,17 +27,17 @@ function App() {
 
     return (
         <>
+            <GradientBackground />
+            <ScrollAnimations />
             <Navbar estaOscuro={estaOscuro} toggleTema={toggleTema} />
             <main className="pt-[60px]">
                 <Hero />
-                <SobreMi />
-                <Habilidades />
                 <Proyectos />
-                <Experiencia />
-                <Educacion />
+                <Habilidades />
+                <Trayectoria />
+                <Certificaciones />
                 <Contacto />
             </main>
-            <Footer />
         </>
     )
 }
